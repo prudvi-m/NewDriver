@@ -27,6 +27,7 @@ namespace Drivers.Migrations
                     DriverId = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     FirstName = table.Column<string>(type: "TEXT", nullable: false),
+                    LastName = table.Column<string>(type: "TEXT", nullable: false),
                     Year = table.Column<int>(type: "INTEGER", nullable: false),
                     Rating = table.Column<int>(type: "INTEGER", nullable: false),
                     GenreId = table.Column<string>(type: "TEXT", nullable: false)
@@ -79,18 +80,18 @@ namespace Drivers.Migrations
 
             migrationBuilder.InsertData(
                 table: "Drivers",
-                columns: new[] { "DriverId", "GenreId", "FirstName", "Rating", "Year" },
-                values: new object[] { 2, "A", "Wonder Woman", 3, 2017 });
+                columns: new[] { "DriverId", "FirstName", "GenreId", "LastName", "Rating", "Year" },
+                values: new object[] { 2, "Wonder Woman", "A", "ok", 3, 2017 });
 
             migrationBuilder.InsertData(
                 table: "Drivers",
-                columns: new[] { "DriverId", "GenreId", "FirstName", "Rating", "Year" },
-                values: new object[] { 3, "R", "Moonstruck", 4, 1988 });
+                columns: new[] { "DriverId", "FirstName", "GenreId", "LastName", "Rating", "Year" },
+                values: new object[] { 3, "Moonstruck", "R", "ok", 4, 1988 });
 
             migrationBuilder.InsertData(
                 table: "Drivers",
-                columns: new[] { "DriverId", "GenreId", "FirstName", "Rating", "Year" },
-                values: new object[] { 4, "D", "Casablanca", 5, 1942 });
+                columns: new[] { "DriverId", "FirstName", "GenreId", "LastName", "Rating", "Year" },
+                values: new object[] { 4, "Casablanca", "D", "ok", 5, 1942 });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Drivers_GenreId",

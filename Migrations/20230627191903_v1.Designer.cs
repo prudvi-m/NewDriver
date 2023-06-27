@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Drivers.Migrations
 {
     [DbContext(typeof(DriverContext))]
-    [Migration("20230627185848_v1")]
+    [Migration("20230627191903_v1")]
     partial class v1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -25,11 +25,15 @@ namespace Drivers.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
+                    b.Property<string>("FirstName")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
                     b.Property<string>("GenreId")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("FirstName")
+                    b.Property<string>("LastName")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
@@ -51,24 +55,27 @@ namespace Drivers.Migrations
                         new
                         {
                             DriverId = 4,
-                            GenreId = "D",
                             FirstName = "Casablanca",
+                            GenreId = "D",
+                            LastName = "ok",
                             Rating = 5,
                             Year = 1942
                         },
                         new
                         {
                             DriverId = 2,
-                            GenreId = "A",
                             FirstName = "Wonder Woman",
+                            GenreId = "A",
+                            LastName = "ok",
                             Rating = 3,
                             Year = 2017
                         },
                         new
                         {
                             DriverId = 3,
-                            GenreId = "R",
                             FirstName = "Moonstruck",
+                            GenreId = "R",
+                            LastName = "ok",
                             Rating = 4,
                             Year = 1988
                         });
