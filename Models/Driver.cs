@@ -15,12 +15,8 @@ namespace Drivers.Models
         [Required(ErrorMessage = "Please enter a last name.")] 
         public string LastName { get; set; } = string.Empty;
 
-        public DateTime Dob { get; set;}
+        public string Dob { get; set;}
 
-        [Required(ErrorMessage = "Please enter a Address.")]
-        public string Address { get; set; } = string.Empty;
-
-        [Required(ErrorMessage = "Please enter a Address.")]
         public string Address { get; set; } = string.Empty;
 
         [Required(ErrorMessage = "Please enter a SSN.")]
