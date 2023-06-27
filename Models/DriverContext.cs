@@ -27,7 +27,7 @@ namespace Drivers.Models
                 new Driver {
                     DriverId = 4,
                     FirstName = "Casablanca",
-                    LastName = "ok"
+                    LastName = "ok",
                     Year = 1942,
                     Rating = 5,
                     GenreId = "D"
@@ -35,7 +35,7 @@ namespace Drivers.Models
                 new Driver {
                     DriverId = 2,
                     FirstName = "Wonder Woman",
-                    LastName = "ok"
+                    LastName = "ok",
                     Year = 2017,
                     Rating = 3,
                     GenreId = "A"
@@ -43,7 +43,7 @@ namespace Drivers.Models
                 new Driver {
                     DriverId = 3,
                     FirstName = "Moonstruck",
-                    LastName = "ok"
+                    LastName = "ok",
                     Year = 1988,
                     Rating = 4,
                     GenreId = "R"

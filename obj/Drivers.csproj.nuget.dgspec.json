@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/prudvi/Desktop/Driver/Drivers.csproj": {}
+    "/Users/prudvi/Desktop/NewDriver/Drivers.csproj": {}
   },
   "projects": {
-    "/Users/prudvi/Desktop/Driver/Drivers.csproj": {
+    "/Users/prudvi/Desktop/NewDriver/Drivers.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/prudvi/Desktop/Driver/Drivers.csproj",
+        "projectUniqueName": "/Users/prudvi/Desktop/NewDriver/Drivers.csproj",
         "projectName": "Drivers",
-        "projectPath": "/Users/prudvi/Desktop/Driver/Drivers.csproj",
+        "projectPath": "/Users/prudvi/Desktop/NewDriver/Drivers.csproj",
         "packagesPath": "/Users/prudvi/.nuget/packages/",
-        "outputPath": "/Users/prudvi/Desktop/Driver/obj/",
+        "outputPath": "/Users/prudvi/Desktop/NewDriver/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/prudvi/.nuget/NuGet/NuGet.Config"
