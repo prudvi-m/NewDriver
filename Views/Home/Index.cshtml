@@ -3,30 +3,43 @@
     ViewData["Title"] = "My Drivers";
 }
 <div class="mb-2">
-    <a asp-controller="Driver" asp-action="Add">Add New Driver</a>
+    <a asp-controller="Driver" asp-action="Add">New Driver</a>
 </div>
 
 <table class="table table-bordered table-striped">
     <thead>
         <tr>
-            <th>FirstName</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Date of Birth</th>
             <th>SSN</th>
-            <th>Phone</th><th></th>
+            <th>Address</th>
+            <th>Post Code</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Driver DriverLicense</th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
         @foreach (var driver in Model) {
             <tr>
                 <td>@driver.FirstName</td>
+                <td>@driver.LastName</td>
+                <td>@driver.DateOfBirth</td>
                 <td>@driver.SSN</td>
+                <td>@driver.Address</td>
+                <td>@driver.PostCode</td>
+                <td>@driver.Email</td>
                 <td>@driver.Phone</td>
+                <td>@driver.DriverLicense</td>
                 <td>
                     <a asp-controller="Driver" asp-action="Edit"
                        asp-route-id="@driver.DriverId"
                        asp-route-slug="@driver.Slug">Edit</a>
                     <a asp-controller="Driver" asp-action="Delete"
                        asp-route-id="@driver.DriverId"
-                       asp-route-slug="@driver.Slug">Delete</a>
+                       asp-route-slug="@driver.Slug">Details</a>
                 </td>
             </tr>
         }

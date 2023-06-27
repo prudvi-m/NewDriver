@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Drivers.Migrations
 {
     [DbContext(typeof(DriverContext))]
-    [Migration("20230627195406_v1")]
+    [Migration("20230627203035_v1")]
     partial class v1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -29,7 +29,10 @@ namespace Drivers.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("Dob")
+                    b.Property<DateTime>("DateOfBirth")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("DriverLicense")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
@@ -42,10 +45,6 @@ namespace Drivers.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("LastName")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("License")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
@@ -67,15 +66,39 @@ namespace Drivers.Migrations
                     b.HasData(
                         new
                         {
-                            DriverId = 4,
-                            Address = "Chicago",
-                            Dob = "01/01/1998",
+                            DriverId = 1,
+                            Address = "NY",
+                            DateOfBirth = new DateTime(1989, 12, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DriverLicense = "",
                             Email = "",
-                            FirstName = "Vinod",
-                            LastName = "Chilaka",
-                            License = "",
-                            Phone = "53456435",
-                            SSN = 34532434
+                            FirstName = "Johnson",
+                            LastName = "Mitchel",
+                            Phone = "1221221221",
+                            SSN = 2353453
+                        },
+                        new
+                        {
+                            DriverId = 2,
+                            Address = "Sydney",
+                            DateOfBirth = new DateTime(1992, 10, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DriverLicense = "",
+                            Email = "",
+                            FirstName = "Mitchel",
+                            LastName = "Strac",
+                            Phone = "2121212121",
+                            SSN = 456435
+                        },
+                        new
+                        {
+                            DriverId = 3,
+                            Address = "Brisbane",
+                            DateOfBirth = new DateTime(1990, 11, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DriverLicense = "",
+                            Email = "",
+                            FirstName = "Breet",
+                            LastName = "Lee",
+                            Phone = "7676767676",
+                            SSN = 23123234
                         });
                 });
 #pragma warning restore 612, 618

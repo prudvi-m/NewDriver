@@ -15,7 +15,7 @@ namespace Drivers.Models
         [Required(ErrorMessage = "Please enter a last name.")] 
         public string LastName { get; set; } = string.Empty;
 
-        public string Dob { get; set;}
+        public DateTime DateOfBirth { get; set;}
 
         public string Address { get; set; } = string.Empty;
 
@@ -26,7 +26,7 @@ namespace Drivers.Models
 
         public string Email { get; set; } = string.Empty;
 
-        public string License { get; set; } = string.Empty;
+        public string DriverLicense { get; set; } = string.Empty;
 
         public string Phone { get; set; }
 

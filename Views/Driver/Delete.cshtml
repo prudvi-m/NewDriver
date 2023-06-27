@@ -1,15 +1,35 @@
 ﻿@model Driver
 @{
-    ViewData["Title"] = "Delete Driver";
+    ViewData["Title"] = "Details";
 }
 
-<h2>Confirm Deletion</h2>
-<h3>@Model.FirstName (@Model.SSN)</h3>
+<h3>@Model.FirstName (@Model.LastName)</h3>
 
-<form asp-action="Delete" method="post">
+@* <form asp-action="Delete" method="post">
     <input type="hidden" asp-for="DriverId" />
 
     <button type="submit" class="btn btn-primary">Delete</button>
     <a asp-controller="Home" asp-action="Index" class="btn btn-primary">Cancel</a>
-</form>
+</form> *@
+
+<div class="card">
+    <div class="card-header">
+        Driver Details
+    </div>
+    <div class="card-body">
+        <h5 class="card-title">@Model.FirstName @Model.LastName</h5>
+
+        <p class="card-text">
+            <strong>Date of Birth:</strong> @Model.DateOfBirth.ToShortDateString()<br />
+            <strong>Address:</strong> @Model.Address<br />
+            <strong>SSN:</strong> @Model.SSN<br />
+            <strong>PostCode:</strong> @Model.PostCode<br />
+            <strong>Email:</strong> @Model.Email<br />
+            <strong>Driver License:</strong> @Model.DriverLicense<br />
+            <strong>Phone:</strong> @Model.Phone<br />
+        </p>
+    </div>
+
+    <a asp-controller="Home" asp-action="Index" class="btn btn-primary m-4">Back</a>
+</div>
 
