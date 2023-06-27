@@ -12,24 +12,29 @@ namespace Drivers.Models
         [Required(ErrorMessage = "Please enter a first name.")] 
         public string FirstName { get; set; } = string.Empty;
 
-        [Required(ErrorMessage = "Please enter a first name.")] 
+        [Required(ErrorMessage = "Please enter a last name.")] 
         public string LastName { get; set; } = string.Empty;
 
-        [Required(ErrorMessage = "Please enter a year.")]
-        [Range(1889, 2050, ErrorMessage = "Year must be between 1889 and now.")]
-        public int? Year { get; set; }
+        public DateTime Dob { get; set;}
 
-        [Required(ErrorMessage = "Please enter a rating.")]
-        [Range(1, 5, ErrorMessage = "Rating must be between 1 and 5.")]
-        public int? Rating { get; set; }
+        [Required(ErrorMessage = "Please enter a Address.")]
+        public string Address { get; set; } = string.Empty;
 
-        [Required(ErrorMessage = "Please enter a genre.")]
-        public string GenreId { get; set; } = string.Empty;
+        [Required(ErrorMessage = "Please enter a Address.")]
+        public string Address { get; set; } = string.Empty;
 
-        [ValidateNever]
-        public Genre Genre { get; set; } = null!;
+        [Required(ErrorMessage = "Please enter a SSN.")]
+        public int? SSN { get; set; }
+
+        public int? PostCode { get; set; }
+
+        public string Email { get; set; } = string.Empty;
+
+        public string License { get; set; } = string.Empty;
+
+        public string Phone { get; set; }
 
         public string Slug =>
-            FirstName?.Replace(' ', '-').ToLower() + '-' + Year?.ToString();
+            FirstName?.Replace(' ', '-').ToLower() + '-' + SSN?.ToString();
     }
 }

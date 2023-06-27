@@ -10,18 +10,16 @@
     <thead>
         <tr>
             <th>FirstName</th>
-            <th>Year</th>
-            <th>Genre</th>
-            <th>Rating</th><th></th>
+            <th>SSN</th>
+            <th>Phone</th><th></th>
         </tr>
     </thead>
     <tbody>
         @foreach (var driver in Model) {
             <tr>
                 <td>@driver.FirstName</td>
-                <td>@driver.Year</td>
-                <td>@driver.Genre.FirstName</td>
-                <td>@driver.Rating</td>
+                <td>@driver.SSN</td>
+                <td>@driver.Phone</td>
                 <td>
                     <a asp-controller="Driver" asp-action="Edit"
                        asp-route-id="@driver.DriverId"

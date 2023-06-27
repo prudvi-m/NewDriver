@@ -17,7 +17,6 @@ namespace Drivers.Controllers
         public IActionResult Index()
         {
             var drivers = context.Drivers
-                .Include(m => m.Genre)
                 .OrderBy(m => m.FirstName)
                 .ToList();
             return View(drivers);
